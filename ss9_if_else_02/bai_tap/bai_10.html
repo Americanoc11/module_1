@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mti;
+    let mqi = +prompt(
+        " Bậc 1 (0 đến 50kWh): 1.000 đồng/kWh.\n" +
+        "Bậc 2 (51 đến 100kWh): 1.500 đồng/kWh.\n" +
+        "Bậc 3 (101 đến 200 kWh): 2.000 đồng/kWh.\n" +
+        "Bậc 4 (201 đến 300 kWh): 2.500 đồng/kWh.\n" +
+        "Bậc 5 (301 đến 400 kWh): 2.800 đồng/kWh.\n" +
+        "Bậc 6 (401 kWh trở lên): 2.900 đồng/kWh.")
+    let day = +prompt(" số ngày của tháng trước liền kề");
+    let n = 30;
+    if (mqi >= 0 && mqi < 50) {
+        mti = ((mqi * 1000) / day) * n;
+    } else if (mqi >= 50 && mqi < 100) {
+        mti = ((mqi * 1500) / day) * n;
+    } else if (mqi >= 50 && mqi < 100) {
+        mti = ((mqi * 2000) / day) * n;
+    } else if (mqi >= 100 && mqi < 200) {
+        mti = ((mqi * 2500) / day) * n;
+    } else if (mqi >= 200 && mqi < 300) {
+        mti = ((mqi * 2800) / day) * n;
+    } else if (mqi >= 300 && mqi < 400) {
+        mti = ((mqi * 2900) / day) * n;
+    }
+    document.writeln("Tiền điện: " + mti);
+
+</script>
+</body>
+</html>

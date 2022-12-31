@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let p = +prompt(" nhập tổng số tiền hiện có");
+    let i = +prompt(" nhập lãi xuất hàng năm. VD: 10% , i= 0.1") / 100;
+    let n = +prompt("nhập số năm") * 12;
+    let m = 12;// m : là số lần ghép lãi trong năm;
+    let totalYears;
+    if (p > 0 && i > 0 && n > 0) {
+        totalYears = p * ((1 + (i / m) ** n * m));
+    } else {
+        alert("nhập sai mời nhập lại");
+    }
+    document.write("Total Year : " + totalYears)
+</script>
+</body>
+</html>

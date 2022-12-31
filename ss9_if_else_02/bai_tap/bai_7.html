@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt(" nhập giá trị cho a");
+    let b = +prompt(" nhập giá trị cho b");
+    let c = +prompt(" nhập giá trị c");
+    let delta = b ** 2 - 4 * a * c;
+    let s1 = -b / a;
+    let s2 = b / a
+    let P = c / a;
+    if (delta > 0) {
+        document.writeln("Phương trình có 2 nghiệm: " + "<br>" + "x = " + s1 + "<br>" + "x = " + P);
+    } else if (delta == 0) {
+        document.writeln("Phương trình có 2 nghiệm kép: " + "<br>" + "x = " + s1 + "<br>" + "x = " + s2);
+    } else if (delta < 0) {
+        document.writeln("phương trình vô nghiệm ");
+    }
+</script>
+</body>
+</html>
