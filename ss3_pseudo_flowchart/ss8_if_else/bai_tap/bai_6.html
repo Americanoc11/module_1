@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let incomeStore = +prompt(" nhập doanh số bán hàng");
+    let result;
+    if (incomeStore > 0 && incomeStore < 200000000) {
+        result = incomeStore + "Đ";
+    } else if (incomeStore >= 200000000 && incomeStore < 400000000) {
+        result = (incomeStore * 1.5) / 100 + "Đ";
+    } else if (incomeStore >= 500000000 && incomeStore < 800000000) {
+        result = (incomeStore * 3) / 100 + "Đ";
+    } else if (incomeStore >= 800000000) {
+        result = (incomeStore * 4) / 100 + "Đ";
+    } else if (incomeStore <= 0) {
+        alert("nhập lại doanh thu");
+    }
+    document.writeln("Income Store: " + incomeStore + "Đ" + "<br>");
+    document.writeln("Commission: " + result);
+</script>
+</body>
+</html>

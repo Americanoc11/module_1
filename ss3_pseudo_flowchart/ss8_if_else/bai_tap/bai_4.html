@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt(" nhập số nguyên thứ 1");
+    let b = +prompt(" nhập số nguyên thứ 2");
+    let c = +prompt(" nhập số nguyên thứ 3");
+    let max = 0;
+    if (a > b && a > c) {
+        max = a
+        document.writeln("max a : " + max + "<br>" + "a" + a + "<br>" + "b" + b + "<br>" + "c" + c);
+    } else if (b > a && b > c) {
+        max = b
+        document.writeln("max b : " + max + "<br>" + "a" + a + "<br>" + "b" + b + "<br>" + "c" + c);
+    } else if (c > a && c > b) {
+        max = c
+        document.writeln("max c : " + max + "<br>" + "a" + a + "<br>" + "b" + b + "<br>" + "c" + c);
+    }
+</script>
+</body>
+</html>
