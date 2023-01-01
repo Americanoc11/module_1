@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let count = 0;
+    let number = 30;
+    let value = 7;
+    let sum = 0;
+    let flag = 1;
+    while (count < number) {
+        if (value % 7 == 0 || value % 7 == 1) {
+            sum += value;
+            count++;
+            document.writeln(value);
+        }
+        value++;
+        flag++;
+    }
+    document.writeln("<br>" + "Total Sum: " + sum + "<br>" + "flag" + flag);
+</script>
 </body>
 </html>

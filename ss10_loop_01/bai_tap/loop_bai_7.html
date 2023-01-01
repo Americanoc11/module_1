@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let count = 0;
+    let number = 100;
+    let value = 0;
+    while (count < number) {
+        value++;
+        count++;
+        if (value % 3 == 0 && value % 5 !== 0) {
+            document.writeln("Fizz");
+        } else if (value % 5 == 0 && value % 5 !== 0) {
+            document.writeln("Buzz");
+        } else if (value % 3 == 0 && value % 5 == 0) {
+            document.writeln("FizzBuzz");
+        }
+        document.writeln(value);
+    }
+</script>
 </body>
 </html>
