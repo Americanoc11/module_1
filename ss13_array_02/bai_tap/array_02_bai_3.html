@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt(" nhập độ dài của mảng");
+    let array = [];
+    let index = 0;
+    for (let i = 0; i < m; i++) {
+        array[i] = +prompt(" nhập giá trị ");
+    }
+    for (let j = 0; j < array.length - 1; j++) {
+        index++;
+    }
+    document.write("Index: " + index);
+</script>
+</body>
+</html>

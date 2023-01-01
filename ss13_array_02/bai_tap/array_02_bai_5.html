@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let strOne= prompt(" nhập chuỗi 1");
+    let strTwo= prompt(" nhập chuỗi 2");
+    let arrOne=strOne.split("");
+    let arrTwo=strTwo.split("");
+    let arrThree= []
+    for (let i = 0; i < arrOne.length; i ++) {
+        for (let j = 0 ; j < arrTwo.length;j++) {
+            if (arrOne[i]==arrTwo[j]) {
+                arrThree.push(arrOne[i])
+                continue;
+            } else {
+                continue;
+            }
+        }
+    }
+</script>
+</body>
+</html>
