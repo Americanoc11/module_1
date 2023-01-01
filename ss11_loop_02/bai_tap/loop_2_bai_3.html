@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // hình 1
+    let n = 5;
+    for (let i = 0; i < n; i++) {
+        document.writeln("<br>");
+        for (let j = 0; j <= i; j++) {
+            document.writeln("*");
+        }
+    }
+    document.writeln("<br>");
+
+    // hình 2
+    for (let i = 5; i > 0; i--) {
+        document.writeln("<br>");
+        for (let j = 0; j < i; j++) {
+            document.writeln("*");
+        }
+    }
+    document.writeln("<br>");
+
+    // hình 3
+    for (let i = 5; i >= 0; i--) {
+        document.writeln("<br>");
+        for (let j = 0; j < i; j++) {
+            document.writeln("&nbsp&nbsp");
+        }
+        for (let a = 5; a > i; a--) {
+            document.writeln("*");
+        }
+    }
+    document.writeln("<br>");
+
+    // Hình 4
+    for (let i = 0; i < 5; i++) {
+        document.writeln("<br>");
+        for (let j = 0; j < i; j++) {
+            document.writeln("&nbsp&nbsp");
+        }
+        for (let a = 5; a > i; a--) {
+            document.writeln("*");
+        }
+    }
+
+</script>
+</body>
+</html>
