@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m1 = +prompt(" độ dài mảng 1");
+    let m2 = +prompt(" độ dài mảng 2");
+    let arrayA = [];
+    let arrayB = [];
+    for (let i = 0; i < m1; i++) {
+        arrayA[i] = +prompt(" nhập phần tử mảng a");
+    }
+    for (let ii = 0; ii < m2; ii++) {
+        arrayB[ii] = +prompt(" nhập phần tử mảng b");
+    }
+    let arrayC = arrayA.concat(arrayB);
+    document.write(arrayC);
+</script>
+</body>
+</html>

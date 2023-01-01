@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt(" nhập độ dài cho mảng");
+    let v = +prompt(" nhập phần tử v ");
+    let array = [];
+    let flag = true;
+    for (let i = 0; i < m; i++) {
+        array[i] = +prompt(" nhập phần tử");
+    }
+    for (let j = 0; j < array.length; j++) {
+        if (v == array[j]) {
+            flag = true;
+        }
+    }
+    if (flag == true) {
+        alert(" V is in the array");
+    } else {
+        alert(" V is not in the array");
+    }
+</script>
+</body>
+</html>
