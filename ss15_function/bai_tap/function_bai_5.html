@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // chưa hoàn thành
+
+    let arrStar1 = ["Polaris", "Aldebaran", "Deneb",
+        "Vega", "Altair", "Dubhe", "Regulus"];
+    let arrStar2 = ["Ursa Minor", "Tarurus", "Cygnus"
+        , "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let array=[];
+    for (let i = 0 ; i < arrStar1.length; i ++) {
+        for (let j = 0; j < arrStar2.length; j ++) {
+            if (arrStar1[i]=== arrStar2[j] ) {
+                array.push(arrStar2[j]);
+            }
+        }
+    }
+    console.log(array)
+</script>
+</body>
+</html>

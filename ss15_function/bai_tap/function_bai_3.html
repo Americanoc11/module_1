@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt(" nhập số cho number1");
+    let number2 = +prompt(" nhập số cho number2");
+    let sum;
+    compareNumber(number1, number2);
+    document.write("<br>" + "Sum : " + sum);
+
+    function compareNumber(item1, item2) {
+        if (item1 > item2) {
+            document.write("number 1 > number 2" + "<br>"
+                + " number 1 : " + item1 + "<br>"
+                + "number 2 : " + item2);
+        } else if (item1 < item2) {
+            sum = item1 + item2;
+            document.write("number 1 < number 2" + "<br>"
+                + " number 1 : " + item1 + "<br>"
+                + "number 2 : " + item2
+            );
+            return sum;
+        }
+    }
+</script>
+
+</body>
+</html>
