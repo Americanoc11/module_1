@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt(" nhập giá trị a");
+    let number2 = +prompt(" nhập giá trị b");
+    let number3 = +prompt(" nhập giá trị c");
+    document.write(checkMin(number1, number2, number3));
+
+    function checkMin(a, b, c) {
+        let min = -1;
+        if (a > 0 && b > 0 && c > 0) {
+            if (a < b && a < c) {
+                min = a;
+                return min;
+            } else if (b < a && b < c) {
+                min = b;
+                return min;
+            } else if (c < a && c < b) {
+                min = c;
+                return min;
+            } else if (a == b || a < c) {
+                min = a;
+                return min;
+            } else if (b == c || b < a) {
+                min = b;
+                return min;
+            } else if (c == a || c < b) {
+                min = a
+                return min;
+            }
+        } else {
+            alert(" mời nhập lại");
+            return;
+        }
+    }
+</script>
+</body>
+</html>

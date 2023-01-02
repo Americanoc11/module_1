@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5]
+    console.log(changeElement(arr));
+
+    function changeElement(array) {
+        let b = 0;
+        let first = 0;
+        let last = array.length - 1;
+        while (first < last) {
+            b = array[first];
+            array[first] = array[last];
+            array[last] = b;
+            first++;
+            last--;
+        }
+        return array;
+    }
+</script>
+</body>
+</html>

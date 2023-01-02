@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt(" nhập số");
+    document.write(facNumber(number));
+
+    function facNumber(x) {
+        let factorial = 1;
+        for (let i = 1; i <= x; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+</script>
+</body>
+</html>
