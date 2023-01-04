@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = [1, 5, 7, 8, 9, 15];
+    alert(sortPlus(arr));
+    alert(sortObb(arr));
+
+    function sortPlus(array) {
+        let c = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    c = array[i];
+                    array[i] = array[j];
+                    array[j] = c;
+                }
+            }
+        }
+        return array
+    }
+
+    function sortObb(array) {
+        let c = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] < array[j]) {
+                    c = array[i];
+                    array[i] = array[j];
+                    array[j] = c;
+                }
+            }
+        }
+        return array
+    }
+</script>
 </body>
 </html>

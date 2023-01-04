@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let module1 = +prompt(" nhập số buổi của module 1");
+    let rest = +prompt("tổng số buổi nghỉ");
+    let total = (rest / module1) * 100;
+    if (module1 > 0 && rest >= 0) {
+        if (total > 10) {
+            alert("gửi mail warning");
+        } else if (total >= 20) {
+            alert(" buộc chuyển lớp");
+        } else if (total < 10) {
+            alert(" ở lại học tiếp");
+        }
+    }
+</script>
 </body>
 </html>

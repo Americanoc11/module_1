@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arr2 = ['4', '6', 1, 2, 3, 5, 'y', 't', 5];
+    let array = arr2.toString();
+    let sum = 0;
+    console.log(array);
+    console.log(arr2);
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > 0 || array[i] < 0) {
+            sum += array[i];
+        }
+    }
+    document.write("Sum Total: " + sum);
+</script>
 </body>
 </html>

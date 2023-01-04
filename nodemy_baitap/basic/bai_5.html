@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let list1 = [3, 6, 7, 9, 5];
+    let list2 = [3, 5, 7, 8, 6, 6, 7];
+    console.log(newArray(list1, list2));
+
+    function newArray(array1, array2) {
+        let array3 = array1.concat(array2);
+        return array3.sort();
+    }
+</script>
 </body>
 </html>

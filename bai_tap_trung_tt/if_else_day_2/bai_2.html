@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let income = +prompt(" nhập lương");
+    let hour = +prompt(" nhập số giờ đã làm");
+    let bonus = 0;
+    if (hour > 0 && income > 0) {
+        if (income <= 100) {
+            bonus = 0;
+        } else if (income > 100 && income < 200) {
+            bonus = (income * 10) / 100;
+        } else if (hour >= 200) {
+            bonus = (income * 20) / 100;
+        }
+    } else {
+        alert("mời nhập lại");
+    }
+    document.write("Bonus: " + bonus);
+</script>
 </body>
 </html>

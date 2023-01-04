@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let array = [1, 2, 2, 2, 5];
+    let v = +prompt(" nhập kí tự");
+    let flag = -1;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === v) {
+            flag++;
+        }
+    }
+    document.write(v + flag);
 
+</script>
 </body>
 </html>

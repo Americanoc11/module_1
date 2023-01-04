@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // chạy không ra
+    let data = [1, 2, 3, 1, 2, 3, 4, 5, 6, 5, 4, 6];
+    let newdata = [];
+
+    for (let i = 0; i < data.length; i++) {
+        for (let j = 0; j < data.length; j++) {
+            if (data[j] == data[i] || j !== i) {
+                newdata.push(data[j])
+            }
+        }
+    }
+    console.log(data)
+
+</script>
 </body>
 </html>

@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arrayPersons = [
+        {firstname: "Đào", lastname: "Văn Anh"},
+        {firstname: "Nguyễn", lastname: "Hoàng"},
+        {firstname: "Lê", lastname: "Hoàng"}
+    ];
+    let newArr = arrayPersons.map(function (value, index) {
+        return {
+            firstname: value.firstname
+            , lastname: value.lastname
+            , adress: "Hà Nội"
+            , index: index
+        }
+    });
+    console.log(newArr);
+
+</script>
 </body>
 </html>

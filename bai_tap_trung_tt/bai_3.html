@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let m = +prompt(" nhập độ dài phần tử");
+    let array = [];
+    for (let i = 0; i < m; i++) {
+        array[i] = +prompt(" nhập phần tử");
+    }
+    console.log(array);
+    alert(" ok");
+    array.sort(function (a, b) {
+        return a - b;
+
+    })
+</script>
 </body>
 </html>

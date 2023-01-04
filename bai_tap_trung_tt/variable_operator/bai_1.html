@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let bill = +prompt(" nhập số tiền bill");
+    let human = +prompt(" nhập số người")
+    let service = +prompt(" nhập mức độ hài lòng từ 1 đến 100");
+    let total;
+    if (service >= 30) {
+        total = ((bill * service) / 100) / human;
+        alert("Outstanding");
+    } else if (service >= 20 && service < 30) {
+        total = ((bill * service) / 100) / human;
+        alert("Good")
+    } else if (service >= 15 && service < 20) {
+        total = ((bill * service) / 100) / human;
+        alert("It was ok")
+    } else if (service >= 10 && service < 15) {
+        total = ((bill * service) / 100) / human;
+        alert("Bad")
+    } else if (service > 5 && service < 10) {
+        total = ((bill * service) / 100) / human;
+        alert("Terrible")
+    } else if (service <= 5) {
+        total = ((bill * service) / 100) / human;
+        alert("Terrible")
+    } else if (service <= 0) {
+        alert(" tính lại");
+    }
+    alert(total)
+</script>
 </body>
 </html>

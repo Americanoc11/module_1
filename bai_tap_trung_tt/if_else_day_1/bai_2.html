@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = 3;
+    let b = 5;
+    let c = 2;
+    let d = 4;
+    let max = 0;
+    if (a > b && a > c && a > d) {
+        max = a
+    } else if (b > a && b > c && b > d) {
+        max = b
+    } else if (c > a && c > b && c > d) {
+        max = c;
+    } else if (d > a && d > b && d > c) {
+        max = d;
+    }
+    if (a < b && a < c && a < d) {
+        min = a
+    } else if (b < a && b < c && b < d) {
+        min = b
+    } else if (c < a && c < b && c < d) {
+        min = c;
+    } else if (d < a && d > b && d < c) {
+        min = d;
+    }
+</script>
 </body>
 </html>
