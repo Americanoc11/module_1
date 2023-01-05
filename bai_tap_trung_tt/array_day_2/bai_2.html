@@ -6,11 +6,23 @@
 </head>
 <body>
 <script>
-    function arrGrown(array) {
-if (array[i*2] > array[i]) {
+    let array = [
+        [1, 2, 3, 4],
+        [5, 1, 3, 3],
+        [2, 5, 2, 3],
+        [2, 3, 5, 1],
+    ];
+    let sum=0;
+     for (let i = 0 ; i < array.length; i ++) {
+         for (let j = 0 ; j < array[i].length; j ++) {
+             if (i=j) {
+                 sum+= array[i][j]
+             }
+         }
+         console.log(array[i])
 
-}
-    }
+     }
+    console.log(sum )
 </script>
 </body>
 </html>
