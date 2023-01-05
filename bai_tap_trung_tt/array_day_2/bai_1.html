@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt(" nhập độ dài cho mảng");
+    let arr = [];
+    let sumEven = 0;
+    let sumOdd = 0;
+    for (let i = 0; i < m; i++) {
+        arr[i] = +prompt("nhập phần tử")
+    }
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] % 2 == 0) {
+            sumEven += arr[j];
+        } else if (arr[j] % 2 == 1) {
+            sumOdd += arr[j];
+        }
+    }
+    document.writeln("Sum Even: " + sumEven + "<br>"
+        + "Sum Odd" + sumOdd + " <br>"
+        + arr)
+</script>
+</body>
+</html>

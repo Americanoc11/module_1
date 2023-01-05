@@ -7,18 +7,81 @@
 <body>
 <table>
     <tr>
+        <th>Amount</th>
+        <th>From currency</th>
+        <th>To currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="amount"></td>
         <td>
-            <input type="text">
+            <select name="" id="from">
+                <option value="usd">USD</option>
+                <option value="jpy">JPY</option>
+                <option value="vnd">VND</option>
+                <option value="rmb">RMB</option>
+            </select>
         </td>
         <td>
-            <select name="" id="">
-                <option value=""></option>
+            <select name="" id="to">
+                <option value="usd">USD</option>
+                <option value="jpy">JPY</option>
+                <option value="vnd">VND</option>
+                <option value="rmb">RMB</option>
             </select>
+        </td>
+        <td>
+            <button onclick="changeMoney()">Change</button>
         </td>
     </tr>
 </table>
+<div id="Result"></div>
 <script>
-   
+    function changeMoney() {
+        let amount = document.getElementById("amount").value;
+        let fromC = document.getElementById("from").value;
+        let toC = document.getElementById("to").value;
+        let result;
+        if (fromC === "usd" && toC === "usd") {
+            result = "Result : " + (amount) + "$";
+        } else if (fromC == "usd" && toC === "jpy") {
+            result = "Result : " + (amount * 132.12) + "Yên Nhật";
+        } else if (fromC == "usd" && toC === "vnd") {
+            result = "Result : " + (amount * 23000) + "Đ";
+        } else if (fromC == "usd" && toC === "rmb") {
+            result = "Result : " + (amount * 6.89) + "Nhân dân tệ";
+        }
+        if (fromC === "jpy" && toC === "jpy") {
+            result = "Result : " + (amount) + "Yên Nhật";
+        } else if (fromC == "jpy" && toC === "usd") {
+            result = "Result : " + (amount * 0.0076) + "$";
+        } else if (fromC == "jpy" && toC === "vnd") {
+            result = "Result : " + (amount * 177.6) + "Đ";
+        } else if (fromC == "jpy" && toC === "rmb") {
+            result = "Result : " + (amount * 0.052) + "Nhân dân tệ";
+        }
+        if (fromC === "vnd" && toC === "vnd") {
+            result = "Result : " + (amount) + "Đ";
+        } else if (fromC == "vnd" && toC === "jpy") {
+            result = "Result : " + (amount * 0.0056) + "Yên Nhật";
+        } else if (fromC == "vnd" && toC === "usd") {
+            result = "Result : " + (amount / 23000) + "$";
+        } else if (fromC == "vnd" && toC === "rmb") {
+            result = "Result : " + (amount * 0.000029) + "Nhân dân tệ";
+        }
+        if (fromC === "rmb" && toC === "rmb") {
+            result = "Result : " + (amount) + "Nhân dân tệ";
+        } else if (fromC == "rmb" && toC === "jpy") {
+            result = "Result : " + (amount * 19.21) + "Yên Nhật";
+        } else if (fromC == "rmb" && toC === "usd") {
+            result = "Result : " + (amount * 0.15) + "$";
+        } else if (fromC == "rmb" && toC === "vnd") {
+            result = "Result : " + (amount * 3041.64) + "Đ";
+        }
+        document.getElementById("Result").innerHTML = result;
+    }
+</script>
+<script>
+
 </script>
 </body>
 </html>
