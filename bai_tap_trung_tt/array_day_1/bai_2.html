@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt(" nhập độ dài cho mảng")
+    let array = [];
+    let arr = [];
+    for (let a = 0; a < m; a++) {
+        array[a] = +prompt(" nhập phần tử");
+    }
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 1; j <= i + 1; j++) {
+            if (array[i] == j ** 2) {
+                arr.push(array[i]);
+            }
+        }
+    }
+    document.writeln(array + "<br>");
+    document.writeln(arr);
+</script>
+</body>
+</html>

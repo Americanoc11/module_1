@@ -6,11 +6,33 @@
 </head>
 <body>
 <script>
-    let m = + prompt(" nhập độ dài cho mảng");
-    let arr=[];
-    for (let i = 0; i < m; i ++) {
-        arr[i]= + prompt(" nhập phần tử");
+    let m = +prompt(" nhập độ dài cho mảng");
+    let arr = [];
+    let indexEven = 0;
+    let indexObb = 0;
+    for (let i = 0; i < m; i++) {
+        arr[i] = +prompt(" nhập phần tử");
     }
+    let flag;
+    for (let i = 0; i < arr.length; i++) {
+        flag = true;
+        if (arr[i] % 2 == 0) {
+            indexEven++;
+        } else {
+            indexObb++;
+        }
+        if (indexEven === indexObb) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+    }
+    if (flag == true) {
+        alert(" ok");
+    } else {
+        alert("no");
+    }
+    document.writeln(arr);
 
 </script>
 </body>
