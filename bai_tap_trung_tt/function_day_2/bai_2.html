@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = +prompt(" nhập cạnh a");
+    let y = +prompt(" nhập cạnh b");
+    let z = +prompt(" nhập cạnh c ");
+    checkTamGiacVuong(x, y, z);
+
+    function checkTamGiacVuong(a, b, c) {
+        let total;
+        if (a == b && a < c && b < c) {
+            total = (a ** 2) + (b ** 2)
+            if (total == c) {
+                alert(" là 3 cạnh của tam giác vuông");
+            }
+        } else if (a > b && a > c || b > a && b > c || c > a && c > b) {
+            alert(" chỉ là 3 cạnh của một tam giác");
+        } else if (a < 0 || b < 0 || c < 0 || a > 0 && b > 0 && c > 0) {
+            alert(" không phải là cạnh của tam giác");
+        }
+    }
+</script>
+</body>
+</html>
