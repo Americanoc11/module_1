@@ -6,23 +6,34 @@
 </head>
 <body>
 <script>
-    let array = [
-        [1, 2, 3, 4],
-        [5, 1, 3, 3],
-        [2, 5, 2, 3],
-        [2, 3, 5, 1],
-    ];
-    let sum=0;
-     for (let i = 0 ; i < array.length; i ++) {
-         for (let j = 0 ; j < array[i].length; j ++) {
-             if (i=j) {
-                 sum+= array[i][j]
-             }
-         }
-         console.log(array[i])
-
-     }
-    console.log(sum )
+    // let array = [
+    //     [1, 2, 3, 4],
+    //     [5, 1, 3, 3],
+    //     [2, 5, 2, 3],
+    //     [2, 3, 5, 1],
+    // ];
+    // let sum=0;
+    //  for (let i = 0 ; i < array.length; i ++) {
+    //      for (let j = 0 ; j < array[i].length; j ++) {
+    //          if (i=j) {
+    //              sum+= array[i][j]
+    //          }
+    //      }
+    //      console.log(array[i])
+    //
+    //  }
+    // console.log(sum )
+    let mFa= +prompt(" nhập độ dài mảng cha");
+    let faArr=new Array( mFa);
+    for( let i=0; i <mFa; i++) {
+        let n= +prompt(" nhập độ dài mảng con")
+        let kidArr= new Array(n)
+        for (let j=0; j <n ; j ++) {
+            kidArr[j]= +prompt(" nhập phần tử")
+        }
+    faArr[i]=kidArr
+    }
+    console.log(faArr)
 </script>
 </body>
 </html>

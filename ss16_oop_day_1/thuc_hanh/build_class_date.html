@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class BuildClassDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        getDay() {
+            return this.day;
+        }
+
+        getMonth() {
+            return this.month;
+        }
+
+        getYear() {
+            return this.year;
+        }
+
+        setDay(day) {
+            return this.day = day;
+        }
+
+        setMonth(month) {
+            return this.month = month;
+        }
+
+        setYear(year) {
+            return this.year = year;
+        }
+
+
+    }
+
+    let myDate = new BuildClassDate(2, 2, 2007);
+    console.log(myDate)
+    // myDate.setDay(10);
+    // myDate.setMonth(10);
+    // myDate.setYear(2019);
+    console.log(myDate)
+</script>
+</body>
+</html>

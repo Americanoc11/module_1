@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>
+            <select id="tiendoi">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+                <option value="EU">EU</option>
+            </select>
+        </td>
+        <td>
+            <select id="tienduoc">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+                <option value="EU">EU</option>
+            </select>
+        </td>
+    </tr>
+    <td>
+        <input type="number" id="input">
+    </td>
+    <td id="display">000.000</td>
+</table>
+<button onclick="tinh()">CLICK</button>
+<script>
+
+    function doiSangTrungGian(x, y) {
+        switch (x) {
+            case "VND":
+                return y / 23000;
+            case "USD":
+                return y;
+            case "EU":
+                return 1.06 * y;
+
+        }
+
+    }
+
+    function tuTrungGianSang(x, y) {
+        switch (x) {
+            case "VND":
+                return y * 23000;
+            case "USD":
+                return y;
+            case "EU":
+                return y / 1.06;
+
+        }
+
+    }
+
+    function tinh() {
+        let x = document.getElementById("tiendoi").value;
+        let y = document.getElementById("tienduoc").value;
+        let h = document.getElementById("input").value;
+        let z = tuTrungGianSang(y, doiSangTrungGian(x, h));
+        document.getElementById("display").innerHTML = z;
+    }
+
+</script>
+</body>
+</html>

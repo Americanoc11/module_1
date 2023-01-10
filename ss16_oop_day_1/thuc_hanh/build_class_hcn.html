@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        areaRectangular() {
+            return this.length * this.width
+        }
+
+        perRectangle() {
+            return 2 * (this.length + this.width)
+        }
+    }
+
+    let rec = new Rectangle(5, 2)
+    rec.areaRectangular()
+    alert(rec.areaRectangular())
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Account {
+        constructor(number, name, money) {
+            this.number = number;
+            this.name = name;
+            this.money = money;
+        }
+
+        getNumber() {
+            return this.number;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getMoney() {
+            return this.money;
+        }
+
+        ToString() {
+            return (this.number + " " + this.name + " " + this.money).toString();
+        }
+
+        getLoadmoney() {
+            return this.money;
+        }
+
+        setLoadMoney(money) {
+            if (money > 0) {
+                alert(" cho phép nạp tiền")
+                this.money += money;
+                return money;
+            } else {
+                alert(" Hệ thống bận");
+            }
+        }
+
+
+        getDrawMoney() {
+            if (this.checkMoney()) {
+                alert(" cho phép rút tiền");
+                return this.money;
+            } else {
+                alert(" không cho phép rút tiền");
+            }
+
+        }
+
+        getDrawMoney() {
+            return this.money;
+        }
+
+        setDrawMoney(money) {
+            if (this.checkMoney() === true && this.money >= money) {
+                this.money -= money;
+                return money;
+            } else {
+                alert("Số dư không đủ");
+            }
+        }
+
+        checkMoney() {
+            if (this.money > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    let user1 = new Account("0110", "Đức", 100000)
+    let user2 = new Account("01010", "Nhật", 200000)
+    let money = +prompt(" Nạp tiền vào tài khoản");
+    let drawMoney = +prompt(" nhập số tiền muốn rút")
+    //
+    console.log(user1.ToString())
+    console.log(user1.getLoadmoney())
+    console.log(user1.setLoadMoney(money));
+    console.log(user1.getDrawMoney(money));
+    console.log(user1.setDrawMoney(drawMoney))
+    console.log(user1);
+    //
+    console.log(user2.ToString());
+    console.log(user2.getLoadmoney())
+    console.log(user2.setLoadMoney(money));
+    console.log(user2.getDrawMoney(money));
+    console.log(user2.setDrawMoney(drawMoney));
+    console.log(user2);
+</script>
+</body>
+</html>

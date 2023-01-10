@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let MyDate = function (day, month, years) {
+    //     this.day = day;
+    //     this.month = month;
+    //     this.years = years;
+    //     this.getDay = function () {
+    //         return this.day
+    //     }
+    //     this.getMonth = function () {
+    //         return this.month;
+    //     }
+    //     this.getYears = function () {
+    //         return this.years
+    //     }
+    //     this.setDay = function (day) {
+    //         return this.day
+    //     }
+    //     this.setMonth = function (month) {
+    //         return this.month
+    //     }
+    //     this.setYears = function (years) {
+    //         return this.years
+    //     }
+    // }
+    // let date = new MyDate(2, 2, 2023);
+    // let day = date.getDay();
+    // let month = date.setMonth();
+    // let years = date.setYears();
+    // console.log(date)
+    // alert(years)
+
+    let cao = 40;
+    let tren = parseInt((cao / 100) * 40);
+    let duoi = cao - tren;
+    let hinhTren = "";
+    for (let i = tren / 2; i <= tren; i++) {
+        for (let k = 1; k < tren - i; k += 2) {
+            hinhTren += " ";
+        }
+        for (let k = 1; k <= i; k++) {
+            hinhTren += "*";
+        }
+        for (let k = 1; k <= tren - i; k++) {
+            hinhTren += " ";
+        }
+        for (let k = 1; k <= i; k++) {
+            hinhTren += "*";
+        }
+        hinhTren += "\n";
+    }
+    let hinhDuoi = "";
+    for (let i = 1; i <= duoi; i++) {
+        for (let j = 1; j < i; j++) {
+            hinhDuoi += " ";
+        }
+        for (let k = (cao + duoi) / 2; k >= i * 2 - 1; k--) {
+            hinhDuoi += "*";
+        }
+        hinhDuoi += "\n";
+    }
+    let hinhTraiTim = hinhTren + hinhDuoi;
+    console.log(hinhTraiTim);
+
+</script>
+</body>
+</html>

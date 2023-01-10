@@ -9,8 +9,11 @@
     let count = 0;
     while (count < 100) {
         let nunber = +prompt(" nhập số");
-        if (nunber > 0 && nunber > 100) {
+        if (nunber > 0 && nunber < 100) {
             alert(" thỏa điều kiện");
+            break;
+        } else {
+            alert(" không thỏa");
         }
     }
 </script>

@@ -6,11 +6,14 @@
 </head>
 <body>
 <script>
-    let father = 35;
+    let father =+prompt(" nhập tuổi cha");
     let son = +prompt(" nhập tuổi con");
     let years = 0;
-    while (years < son) {
-        years++;
+    let count = 1;
+    while (count < son) {
+        years = father - 2 * son;
+        count++;
+
     }
     document.writeln("Father : " + father + " <br>"
         + "Son : " + son + "<br>"

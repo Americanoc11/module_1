@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rat {
+        constructor(name, weight, speed, life) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.life = life;
+        }
+
+        getNameRat() {
+            return this.name;
+        }
+
+        getVoiceRat() {
+            alert(" chít chít");
+            return "chit chit"
+        }
+
+        getSpeed() {
+            return this.speed;
+        }
+
+        setSpeed(speed) {
+            this.speed = speed;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weigth) {
+            this.weight = weigth;
+        }
+
+        life() {
+            return this.life
+        }
+
+        checkLife() {
+            if (this.life == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decreaseRat() {
+            if (this.isEmpty()) {
+                alert("Đã hết chuột")
+            } else {
+                this.weight--;
+            }
+        }
+    }
+
+    class Cat {
+        constructor(name, weight, maxspeed) {
+            this.name = name;
+            this.weight = weight;
+            this.maxspeed = maxspeed;
+        }
+
+        getVoiceCat() {
+            alert(" meo meo")
+            return "Meo meo"
+        }
+
+        getNameCat() {
+            return this.name;
+        }
+        eat(rat){
+            if (rat.getWeight>0) {
+                alert(" trọng lượng của mèo tăng lên một");
+                rat.decreaseRat()
+            } else {
+                return this.weight++
+            }
+        }
+
+        eatRat() {
+            if (this.checkLife()) {
+                return this.weight;
+            } else {
+                alert(" thịt bị thối, mèo không ăn");
+                return this.weight;
+            }
+        }
+
+        catchRat(rat) {
+            if (this.maxspeed > rat.getSpeed) {
+                alert(" mèo bắt được chuột");
+                return 1
+            } else {
+                alert(" mèo không bắt được chuột");
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        getMaxspeed() {
+            return this.maxspeed;
+        }
+
+        setMaxspeed(maxspeed) {
+            this.maxspeed = maxspeed;
+        }
+
+        checkLife(rat) {
+            if (rat.life == true) {
+                alert(" Chuột còn sống, mèo bắt đầu ăn ");
+                return true;
+            } else {
+                alert(" không còn sống");
+                return false;
+            }
+        }
+    }
+
+    let rat = new Rat("chuột", 1, 1, true);
+    let cat = new Cat("mèo", 1, 2);
+    // Cat.catchRat(rat);
+    document.write("Chuột: " + rat.getVoiceRat() + "<br>")
+    document.write("Mèo: " + cat.getVoiceCat() + "<br>")
+    document.write("Mèo bắt được chuột: " + cat.catchRat(rat) + "<br>");
+    document.write("kiểm tra trạng thái: " + cat.checkLife(rat) + " <br>")
+    document.write("Trọng lượng của mèo: " + cat.getWeight() + "<br>")
+    document.write("Trọng lượng của mèo sau khi ăn: " + cat.eat() + "<br>")
+
+
+</script>
+</body>
+</html>
