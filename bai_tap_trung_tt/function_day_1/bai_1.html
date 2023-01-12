@@ -6,30 +6,28 @@
 </head>
 <body>
 <script>
-    let m = +prompt(" nhập độ dài cho mảng");
-    let arr1 = [];
-    for (let i = 0; i < m; i++) {
-        arr1[i] = +prompt(" nhập phần tử");
+    let length = +prompt(" nhập độ dài cho mảng");
+    let arr = [];
+    for (let i = 0; i < length; i++) {
+        arr[i] = +prompt(" nhập phần tử cho mảng");
     }
-    alert(checkArray(arr1))
+    document.writeln(arr + "<br>");
+    document.write(checkNumber(arr));
 
-    function checkArray(array) {
-        let index = 0;
-        let flag = true;
+    function checkNumber(array) {
+        let count = 0;
         for (let i = 0; i < array.length; i++) {
-            flag = true;
             if (array[i] % 2 == 0) {
-                flag = true;
-            } else {
-                flag = false;
+                count++;
             }
         }
-        if (flag == true) {
-            index++;
-        } else {
-            index--;
+        if (count == 0) {
+            return 0
+        } else if (count == array.length) {
+            return 1
+        } else if (count > 0 && count < array.length) {
+            return -1
         }
-        return index;
     }
 </script>
 </body>

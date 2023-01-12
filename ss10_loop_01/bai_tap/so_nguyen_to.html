@@ -6,19 +6,20 @@
 </head>
 <body>
 <script>
-    let number = 20;
+    let n = 2;
+    let i = 1
     let count = 0;
-    let N = 2;
-    while (count < number) {
-        if (N / 2 == 1 || N / 3 == 1) {
-            count++;
-            document.writeln(N)
+    while (count < 20) {
+        let flag = false
+        if (n % 1 == 0) {
+            flag = true;
         }
-        if (N % 2 == 1) {
+        if (flag == true) {
             count++;
-            document.writeln(N)
         }
-        N++;
+        n++;
+        document.writeln(n)
+
     }
 </script>
 </body>
