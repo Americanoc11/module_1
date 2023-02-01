@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = [5, 2, 5];
+    let denom = [6, 3, 4];
+    let fraction=0;
+    let max=0;
+    for (let i = 0; i < num.length; i++) {
+        for (let j = 0; j < denom.length; j++) {
+            if (i == j) {
+                fraction = num[i] / denom[j];
+                break;
+            }
+        }
+        if (max < fraction) {
+            max=fraction;
+        }
+    }
+    document.writeln(max);
+</script>
+</body>
+</html>

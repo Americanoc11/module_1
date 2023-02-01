@@ -6,15 +6,15 @@
 </head>
 <body>
 <script>
-    class Account {
-        constructor(number, name, money) {
-            this.number = number;
+    class Bank {
+        constructor(account, name, money) {
+            this.account = account;
             this.name = name;
             this.money = money;
         }
 
-        getNumber() {
-            return this.number;
+        getAcount() {
+            return this.account;
         }
 
         getName() {
@@ -25,75 +25,29 @@
             return this.money;
         }
 
-        ToString() {
-            return (this.number + " " + this.name + " " + this.money).toString();
-        }
-
-        getLoadmoney() {
-            return this.money;
-        }
-
-        setLoadMoney(money) {
+        setNaptien(money) {
             if (money > 0) {
-                alert(" cho phép nạp tiền");
                 this.money += money;
-                return money;
-            } else {
-                alert(" Hệ thống bận");
             }
         }
 
-
-        getDrawMoney() {
-            if (this.checkMoney()) {
-                alert(" cho phép rút tiền");
-                return this.money;
-            } else {
-                alert(" không cho phép rút tiền");
-            }
-
-        }
-
-        getDrawMoney() {
-            return this.money;
-        }
-
-        setDrawMoney(money) {
-            if (this.checkMoney() === true && this.money >= money) {
+        setRutTien(money) {
+            if (money >= 0 && money <= this.money) {
+                alert(" Được phép rút tiền");
                 this.money -= money;
-                return money;
             } else {
-                alert("Số dư không đủ");
-            }
-        }
-
-        checkMoney() {
-            if (this.money > 0) {
-                return true;
-            } else {
-                return false;
+                alert(" Số dư không đủ");
             }
         }
     }
 
-    let user1 = new Account("0110", "Đức", 100000)
-    let user2 = new Account("01010", "Nhật", 200000)
-    let money = +prompt(" Nạp tiền vào tài khoản");
-    let drawMoney = +prompt(" nhập số tiền muốn rút")
-    //
-    console.log(user1.ToString())
-    console.log(user1.getLoadmoney())
-    console.log(user1.setLoadMoney(money));
-    console.log(user1.getDrawMoney(money));
-    console.log(user1.setDrawMoney(drawMoney))
-    console.log(user1);
-    //
-    console.log(user2.ToString());
-    console.log(user2.getLoadmoney())
-    console.log(user2.setLoadMoney(money));
-    console.log(user2.getDrawMoney(money));
-    console.log(user2.setDrawMoney(drawMoney));
-    console.log(user2);
+    let account_1 = new Bank(113, "Duc", 100000);
+    let money = +prompt(" nhập tiền");
+    let money2 = +prompt(" rút tiền");
+    account_1.toString();
+    account_1.setNaptien(money);
+    account_1.setRutTien(money2);
+    console.log(account_1)
 </script>
 </body>
 </html>
