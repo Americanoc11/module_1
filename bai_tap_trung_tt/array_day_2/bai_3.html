@@ -7,16 +7,16 @@
 <body>
 <script>
 
-    // không xét điều kiện được
     let n = +prompt("Nhập vào số lượng phần tử ");
     let i = 0;
-    let arr = [];
+    let array = [];
     for (let i = 0; i < n; i++) {
         do {
-            arr[i] = +prompt("Nhập phần tử thứ " + (i + 1) + " : ");
+            array[i] = +prompt("Nhập phần tử thứ " + (i + 1) + " : ");
         }
-        while (!checkArr(arr, i));
+        while (!checkArr(array, i));
     }
+
 
     function checkArr(array, i) {
         for (let j = 0; j < i; j++) {
@@ -27,7 +27,7 @@
         return true;
     }
 
-    console.log(arr)
+    console.log(array)
 </script>
 </body>
 </html>
