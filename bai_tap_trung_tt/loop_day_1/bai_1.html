@@ -6,14 +6,19 @@
 </head>
 <body>
 <script>
-    let number = +prompt(" nhâp số muốn in ra thứ ")
-    let count = 0;
-    let i = 50;
-    while (count < number) {
-        i++;
+
+    let n = +prompt("nhập vào số muốn in trong dãy số vô hạn là : ");
+    let number = 50;
+    let count = 1;
+    while (true) {
+        number = number + count;
+
+        if (count == n) {
+            document.writeln("Số thứ " + n + " trong dãy số vô hạn là : " + number);
+            break;
+        }
         count++;
     }
-    document.writeln(i);
 </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = prompt(" nhập giá trị");
+    findMax(m);
+
+    function findMax() {
+        let n = m.split("");
+        if (m >= 1000 && m <= 10000) {
+            for (let i = 0; i < n.length; i++) {
+                if (n[i] < n[i + 1]) {
+                    n.splice(i, 1);
+                    break;
+                }
+            }
+            console.log(n.join(""));
+        } else {
+            console.log("-1");
+        }
+    }
+
+</script>
+</body>
+</html>

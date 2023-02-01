@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [1, 5, 4, 0, 2]
+    let pilotIndex = array.length - 1;
+    let pilot = array[pilotIndex];
+    let left = [];
+    let right = [];
+    let total;
+    for (let i = 0; i < pilotIndex; i++) {
+        total = array[i];
+        console.log(total)
+        if (total < pilot) {
+            left.push(total)
+        } else {
+            right.push(total)
+        }
+    }
+
+    console.log(left);
+    console.log(right);
+    console.log(left+pilot+right)
+
+
+</script>
+</body>
+</html>

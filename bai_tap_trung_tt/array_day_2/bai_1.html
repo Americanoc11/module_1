@@ -8,21 +8,14 @@
 <script>
     let m = +prompt(" nhập độ dài cho mảng");
     let arr = [];
-    let sumEven = 0;
-    let sumOdd = 0;
+    let sum = 0;
     for (let i = 0; i < m; i++) {
         arr[i] = +prompt("nhập phần tử");
     }
-    for (let j = 0; j < arr.length; j++) {
-        if (arr[j] % 2 == 0) {
-            sumEven += arr[j];
-        } else if (arr[j] % 2 == 1) {
-            sumOdd += arr[j];
-        }
+    for (let j = 0; j < arr.length; j += 2) {
+        sum += arr[j]
     }
-    document.writeln("Sum Even: " + sumEven + "<br>"
-        + "Sum Odd" + sumOdd + " <br>"
-        + arr);
+    document.writeln(sum)
 </script>
 </body>
 </html>

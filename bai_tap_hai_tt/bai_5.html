@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // chưa hoàng thành
+    let array = [-1, 150, 190, 170, -1, -1, 160, 180]
+
+    function bubbleSort(array) {
+
+        let flag;
+        for (let i = 0; i < array.length; i++) {
+            flag = false
+            if (array[i] == -1) {
+                continue;
+            }
+            for (let j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] !== -1 && array[j] > array[j + 1]) {
+                    if (array[j] !== -1 && array[j + 1] == -1) {
+                        continue;
+                    } else {
+                        [array[j], array[j + 1]] = [array[j + 1], array[j]];
+                        flag = true;
+                    }
+                }
+            }
+            if (flag == true) {
+                break;
+            }
+        }
+        return array
+
+    }
+
+    console.log(bubbleSort(array))
+    console.log(array)
+    let pilotIndex= array.length-3;
+    let pilot= array[pilotIndex];
+
+
+</script>
+</body>
+</html>

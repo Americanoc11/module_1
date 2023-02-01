@@ -7,14 +7,25 @@
 <body>
 <script>
     let arr = [1, 4, 5, 2, 7, 9, 4];
+    // sắp xếp mảng tăng dần
     for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; arr.length-1-i; j++) {
-            if (arr[j] < arr[j + 1]) {
-            [arr[j],arr[j+1]]=[arr[j+1],arr[j]]
+        for (let j = 0; j < arr.length - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
             }
         }
     }
-    console.log(arr)
+    // sắp xếp mảng giảm dần
+    let first = 0;
+    let last = arr.length - 1;
+    while (arr[first] < arr[last]) {
+        let b = arr[first];
+        arr[first] = arr[last];
+        arr[last] = b;
+        first++;
+        last--;
+    }
+    console.log(arr);
 
     // function bubbleSort(array) {
     //     for (let i = 0; i < array.length; i++) {

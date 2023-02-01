@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let c1 = "aabcc";
+    let c2 = "adcaa";
+    let array3 = [];
+    let index=0;
+    let array = c1.split("");
+    let array2 = c2.split("");
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array[i] === array2[j]) {
+                array3.push(array[i]);
+                array.splice(array[i],1);
+                array2.splice(array2[j],1);
+            }
+        }
+    }
+    for (let element in array3) {
+        index++
+    }
+    console.log(array3)
+    document.writeln(index)
+
+</script>
+</body>
+</html>

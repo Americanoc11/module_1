@@ -6,11 +6,11 @@
 </head>
 <body>
 <script>
-    let array = [1, 2, 3, 4, 5,1];
+    let array = [1,2,3,4,5];
     let flag = false;
     for (let i = 0; i < array.length; i++) {
         flag = true;
-        for (let j = i+1; j < array.length; j++) {
+        for (let j = i**2; j < array[i].length; j++) {
             if (array[i] < array[j]) {
                 flag = true
             } else {

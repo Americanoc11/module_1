@@ -8,19 +8,26 @@
 <script>
 
     // không xét điều kiện được
-    let number = [1, 2, 3, 1, 4, 5, 6];
-    let flat = false;
-    for (let i = 0; i < number.length; i++) {
-        for (let j = 0; j < number[i]; j++) {
-            if (number[i] == number[j + 1]) {
-                flag = true
+    let n = +prompt("Nhập vào số lượng phần tử ");
+    let i = 0;
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        do {
+            arr[i] = +prompt("Nhập phần tử thứ " + (i + 1) + " : ");
+        }
+        while (!checkArr(arr, i));
+    }
+
+    function checkArr(array, i) {
+        for (let j = 0; j < i; j++) {
+            if (array[i] == array[j]) {
+                return false;
             }
         }
-        if (flat == true) {
-            alert(" phần tử trùng nhau yêu cầu nhập lại");
-        }
+        return true;
     }
-    document.write(number)
+
+    console.log(arr)
 </script>
 </body>
 </html>

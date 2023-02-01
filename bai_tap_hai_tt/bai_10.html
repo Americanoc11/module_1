@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayUsd = [3, 7];
+    let binh = 4
+    let buy = 0;
+    let min = 0;
+    for (let i = 0; i < arrayUsd.length; i++) {
+        if (min > arrayUsd[i]) {
+            min = arrayUsd[i]
+        }
+        buy = binh-min
+    }
+    console.log(min)
+</script>
+</body>
+</html>
