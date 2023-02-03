@@ -10,17 +10,21 @@
     let n = +prompt("Nhập vào số lượng phần tử ");
     let i = 0;
     let array = [];
+    let count = 0;
+    let length = n;
     for (let i = 0; i < n; i++) {
         do {
             array[i] = +prompt("Nhập phần tử thứ " + (i + 1) + " : ");
         }
         while (!checkArr(array, i));
+
     }
 
 
     function checkArr(array, i) {
         for (let j = 0; j < i; j++) {
             if (array[i] == array[j]) {
+                alert(" Trùng phần tử vị trí: " + (j + 1));
                 return false;
             }
         }
