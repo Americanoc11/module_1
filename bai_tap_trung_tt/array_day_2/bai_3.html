@@ -7,31 +7,63 @@
 <body>
 <script>
 
-    let n = +prompt("Nhập vào số lượng phần tử ");
-    let i = 0;
-    let array = [];
-    let count = 0;
-    let length = n;
-    for (let i = 0; i < n; i++) {
-        do {
-            array[i] = +prompt("Nhập phần tử thứ " + (i + 1) + " : ");
-        }
-        while (!checkArr(array, i));
+    // let n = +prompt("Nhập vào số lượng phần tử ");
+    // let i = 0;
+    // let array = [];
+    // let count = 0;
+    // let length = n;
+    // for (let i = 0; i < n; i++) {
+    //     do {
+    //         array[i] = +prompt("Nhập phần tử thứ " + (i + 1) + " : ");
+    //     }
+    //     while (!checkArr(array, i));
+    //
+    // }
+    //
+    //
+    // function checkArr(array, i) {
+    //     for (let j = 0; j < i; j++) {
+    //         if (array[i] == array[j]) {
+    //             alert(" Trùng phần tử vị trí: " + (j + 1));
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+    //
+    // console.log(array)
 
+    class Bank {
+        constructor(account, name, money) {
+            this.account = account;
+            this.name = name;
+            this.money = money;
+        }
+
+        Account() {
+            return this.account
+        }
+
+        Name() {
+            return this.name
+        }
+
+        Money() {
+            return this.money
+        }
+
+        getNaptien() {
+            return this.money
+        }
+
+        setNaptien(money) {
+            this.money += money;
+        }
     }
 
-
-    function checkArr(array, i) {
-        for (let j = 0; j < i; j++) {
-            if (array[i] == array[j]) {
-                alert(" Trùng phần tử vị trí: " + (j + 1));
-                return false;
-            }
-        }
-        return true;
-    }
-
-    console.log(array)
+    let Duc = new Bank("113", "Duc", 100);
+    console.log(Duc)
+    console.log(Duc.setNaptien(+prompt(" enter a money")))
 </script>
 </body>
 </html>

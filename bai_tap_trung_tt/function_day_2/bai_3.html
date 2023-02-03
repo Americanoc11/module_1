@@ -16,6 +16,9 @@
                 if (n[i] < n[i + 1]) {
                     n.splice(i, 1);
                     break;
+                } else if (n[i + 1] < n[i]) {
+                    n.splice(i + 1, 1);
+                    break;
                 }
             }
             console.log(n.join(""));
