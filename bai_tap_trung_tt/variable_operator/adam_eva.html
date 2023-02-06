@@ -2,9 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decrease() {
+            if (this.isEmpty()) {
+                alert(" Hết táo rồi");
+            } else {
+                this.weight--;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setGender() {
+            if (this.isMale()) {
+                return "Male"
+            } else {
+                return "Female"
+            }
+        }
+
+        isMale() {
+            if (this.gender == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        checkApple(apple) {
+            return apple.isEmpty()
+        }
+
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.decrease();
+                this.weight++;
+            } else {
+                alert(" Đã hết táo rồi");
+            }
+        }
+    }
+
+    let appleC = new Apple(10);
+    let human1 = new Human("adam", 1, 55);
+    human1.eat(appleC);
+    console.log(appleC);
+    console.log(human1.eat(appleC));
+
+</script>
 </body>
 </html>

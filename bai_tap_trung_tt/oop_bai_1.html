@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    class Bank {
+    class Account {
         constructor(account, name, money) {
             this.account = account;
             this.name = name;
@@ -41,13 +41,13 @@
         }
     }
 
-    let account_1 = new Bank(113, "Duc", 100000);
+    let human = new Account(113, "Duc", 100000);
     let money = +prompt(" nhập tiền");
     let money2 = +prompt(" rút tiền");
-    account_1.toString();
-    account_1.setNaptien(money);
-    account_1.setRutTien(money2);
-    console.log(account_1)
+    human.toString();
+    human.setNaptien(money);
+    human.setRutTien(money2);
+    console.log(human);
 </script>
 </body>
 </html>

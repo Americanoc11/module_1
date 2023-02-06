@@ -4,31 +4,134 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
 <script>
-    let length = +prompt(" nhập độ dài cho mảng cha");
-    let array = new Array(length);
-    let sum = 0;
-    for (let i = 0; i < length; i++) {
-        let length2 = +prompt(" nhập độ dài mảng con");
-        let array2 = new Array(length2);
-        for (let j = 0; j < length2; j++) {
-            array2[j] = +prompt(" nhập phần tử")
-        }
-        array[i] = array2;
-    }
+    // let length = +prompt(" nhập độ dài cho mảng cha");
+    // let array = new Array(length);
+    // let sum = 0;
+    // for (let i = 0; i < length; i++) {
+    //     let length2 = +prompt(" nhập độ dài mảng con");
+    //     let array2 = new Array(length2);
+    //     for (let j = 0; j < length2; j++) {
+    //         array2[j] = +prompt(" nhập phần tử")
+    //     }
+    //     array[i] = array2;
+    // }
+    // let array = [
+    //     [1, 2, 3, 4],
+    //     [4, 3, 2, 1],
+    //     [2, 3, 4, 5],
+    //     [5, 4, 3, 2],
+    // ]
+    // let sum = 0;
+    // for (let i = 0; i < array.length; i++) {
+    //     for (let j = 0; j < array[i].length; j++) {
+    //         if (i == j) {
+    //             sum += array[i][j];
+    //         }
+    //         if (i + j == array.length - 1) {
+    //             sum += array[i][j];
+    //         }
+    //     }
+    // }
+    // console.log(sum);
+    // console.log(array);
+    // let number = 2;
+    // let count = 0;
+    // let flag = false;
+    // while (count < 20) {
+    //     flag = false;
+    //     if (number == 2 || number == 3) {
+    //         document.writeln(number);
+    //     } else {
+    //         for (let i = 2; i <= Math.sqrt(number); i++) {
+    //             if (number % i == 0) {
+    //                 flag = true;
+    //                 break;
+    //             } else {
+    //                 flag = false;
+    //             }
+    //         }
+    //         if (flag == false) {
+    //             count++;
+    //             document.writeln(number);
+    //         }
+    //     }
+    //     number++;
+    // }
+    // let length = +prompt(" Enter length dismetial");
+    // let arr = Array(length);
+    // for (let i = 0; i < length; i++) {
+    //     let length2 = +prompt(" Enter length array");
+    //     let arr2 = Array(length2);
+    //     for (let j = 0; j < length2; j++) {
+    //         arr2[j] = +prompt(" Enter a element " + (j + 1) + " :");
+    //         arr[i] = arr2;
+    //     }
+    // }
+    // findPrime(arr)
+    //
+    // function findPrime(array) {
+    //     let flag = true;
+    //     for (let i = 0; i < array.length; i++) {
+    //         for (let j = 0; j < array.length; j++) {
+    //             if (array[i][j] < 2) {
+    //                 continue;
+    //             } else {
+    //                 flag = true;
+    //                 for (let k = 2; k <= Math.sqrt(array[i][j]); k++) {
+    //                     if (array[i][j] % k == 0) {
+    //                         flag = false;
+    //                         break;
+    //                     } else {
+    //                         flag = true;
+    //                     }
+    //                 }
+    //                 if (flag) {
+    //                     document.writeln(array[i][j])
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    // let array = [
+    //     [1, 2, 3, 4],
+    //     [5, 4, 3, 2],
+    //     [2, 3, 4, 5],
+    //     [5, 4, 3, 2],
+    // ];
+    // let sum = 0;
+    // // let row = +prompt(" Enter row want delete");
+    // // for (let i = 0; i < array.length; i++) {
+    // //     for (let j = 0; j < array.length; j++) {
+    // //         if (j == row) {
+    // //             sum += array[i][j]
+    // //             break;
+    // //         }
+    // //     }
+    // // }
+    // for (let i = 0; i < array.length; i++) {
+    //     for (let j = 0; j < array.length; j++) {
+    //         if (i == j) {
+    //             sum += array[i][j];
+    //         }
+    //         if (i + j == array.length - 1) {
+    //             sum+=array[i][j];
+    //         }
+    //     }
+    // }
+    // console.log(sum);
+    let str = prompt("Enter a string ");
+    let array = str.split("");
+    let char = prompt("Enter character")
+    let count = 0;
     for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array[i].length; j++) {
-            if (i == j) {
-                sum += array[i][j]
-            }
-            if (i + j == array.length - 1) {
-                sum += array[i][j]
-            }
+        if (array[i] == char) {
+            count++;
         }
     }
-    console.log(sum);
-    console.log(array);
+    document.writeln(" Character: " + char + "<br>" + " find: " + count)
+
 </script>
+<body>
 </body>
 </html>
