@@ -6,16 +6,25 @@
 </head>
 <body>
 <script>
-    let income = +prompt(" Enter a income");
+    let income = +prompt(" Lương hàng tháng");
+    let tax;
     let total;
-    let result;
-    if (income < 7000000) {
-        total = "Thuế : " + (income * 5) / 100 + " Vnđ";
-    } else if (income >= 7000000 && income < 15000000) {
-        total = "Thuế : " + (income * 10) / 100 + " Vnđ";
-    } else if (income >= 15000000) {
-        total = "Thuế : " + (income * 20) / 100 + " Vnđ";
+    if (income > 0) {
+        if (income < 7000000) {
+            tax = income * 5 / 100;
+            total = income - tax;
+        } else if (income >= 7000000 && income < 15000000) {
+            tax = income * 10 / 100;
+            total = income - tax;
+        } else if (income >= 15000000) {
+            tax = income * 20 / 100;
+            total = income - tax;
+        }
+    } else {
+        alert(" Lỗi nhập tiền");
     }
+    document.writeln(" Tax: " + tax + " <br>"
+        + "Total: " + total);
 </script>
 </body>
 </html>
