@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt(" Enter a length dismertial");
+    let array = Array(length);
+    for (let i = 0; i < array.length; i++) {
+        let length2 = +prompt("Enter a length array " + (i + 1) + " :");
+        let array2 = Array(length2);
+        for (let j = 0; j < array2.length; j++) {
+            array2[j] = +prompt(" Enter a element " + (j + 1) + " : ");
+            array[i] = array2;
+        }
+    }
+
+    function findMax(array) {
+        let max = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array.length; j++) {
+                if (max < array[i][j]) {
+                    max = array[i][j];
+                }
+            }
+        }
+        return max;
+
+    }
+
+    function findMin(array) {
+        let min = array[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array.length; j++) {
+                if (min > array[i][j]) {
+                    min = array[i][j];
+                }
+            }
+        }
+        return min;
+
+    }
+
+    console.log(findMax(array));
+    console.log(findMin(array));
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px">
+    <tr>
+        <th colspan="4">Menu</th>
+    </tr>
+    <tr>
+        <th colspan="2">Tên món</th>
+        <th> Giá</th>
+        <th> Số lượng</th>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="clickNumber1()" id="numberOne">1</button>
+        </td>
+        <td>Cafe</td>
+        <td>12000</td>
+        <td><input type="number" id="cafe"></td>
+    </tr>
+    <tr>
+        <td>
+            <button> 2</button>
+        </td>
+        <td>Cam Vắt</td>
+        <td>15000</td>
+        <td><input type="number" id="cam"></td>
+    </tr>
+    <tr>
+        <td>
+            <button> 3</button>
+        </td>
+        <td>Nước ép cà rốt</td>
+        <td>15000</td>
+        <td><input type="number" id="carot"></td>
+    </tr>
+    <tr>
+        <td>
+            <button> 4</button>
+        </td>
+        <td>Nước ép cà chua</td>
+        <td>15000</td>
+        <td><input type="number" id="cachua"></td>
+    </tr>
+    <tr>
+        <td>
+            <button> 5</button>
+        </td>
+        <td>Nước lọc</td>
+        <td>10000</td>
+        <td><input type="number" id="nuocloc"></td>
+    </tr>
+    <tr>
+        <td>
+            <button> 6</button>
+        </td>
+        <td>Nước dừa</td>
+        <td>20000</td>
+        <td><input type="number" id="nuocdua"></td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <button onclick="showResult()">7</button>
+        </td>
+        <td id="result"></td>
+    </tr>
+</table>
+<script>
+    function showResult() {
+        let result = document.getElementById('result');
+        let cafe = document.getElementById('cafe').value;
+        let cam = document.getElementById('cam').value;
+        let carot = document.getElementById('carot').value;
+        let cachua = document.getElementById('cachua').value;
+        let nuocloc = document.getElementById('nuocloc').value;
+        let nuocdua = document.getElementById('nuocdua').value;
+        let total = cafe * 12000 + cam * 15000 + carot * 15000 + cachua * 15000 + nuocloc * 10000 + nuocdua * 20000;
+        result.innerHTML = total;
+    }
+
+    function clickNumber1() {
+        let numberOne = document.getElementById('numberOne').value;
+        let cafe = document.getElementById('cafe').value;
+        let total = 1;
+    }
+
+</script>
+</body>
+</html>

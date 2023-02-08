@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let income = +prompt(" Enter a income");
+    let total;
+    let result;
+    if (income < 7000000) {
+        total = "Thuế : " + (income * 5) / 100 + " Vnđ";
+    } else if (income >= 7000000 && income < 15000000) {
+        total = "Thuế : " + (income * 10) / 100 + " Vnđ";
+    } else if (income >= 15000000) {
+        total = "Thuế : " + (income * 20) / 100 + " Vnđ";
+    }
+</script>
+</body>
+</html>

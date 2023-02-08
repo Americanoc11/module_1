@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt(" Enter a length dismential");
+    let array = Array(length);
+    for (let i = 0; i < array.length; i++) {
+        let length2 = +prompt(" Enter a length array " + (i + 1) + " : ");
+        let array2 = Array(length2);
+        for (let j = 0; j < array2.length; j++) {
+            array2[j] = +prompt(" Enter a element " + (j + 1) + " : ");
+            array[i] = array2;
+        }
+    }
+    console.log(array);
+    displayPrimeDismential(array);
+
+    function displayPrimeDismential(array) {
+        let flag = false;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] < 2) {
+                    continue;
+                } else {
+                    flag = true;
+                    for (let k = 2; k <= Math.sqrt(array[i][j]); k++) {
+                        if (array[i][j] % k == 0) {
+                            flag = false;
+                            break;
+                        } else {
+                            flag = true;
+                        }
+                    }
+                    if (flag) {
+                        document.writeln(array[i][j]);
+                    }
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

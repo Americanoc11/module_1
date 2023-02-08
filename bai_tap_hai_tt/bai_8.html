@@ -7,22 +7,22 @@
 <body>
 <script>
 
-    // chưa hoan thành
-    let array = [1, 4, 5, 2, 3];
+    let array = [1, 4, 5, 2, 1];
     let arr = [1, 2, 3];
     let count = 0;
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < array.length; j++) {
-            for (let k = 0; k < array.length; k++) {
-                if (arr[i] == array[j]) {
-
-                }
+            if (arr[i] == array[j]) {
+               count++;
+               break;
             }
         }
-    }
-    if (count === arr.length - 1) {
+        if (count==arr.length) {
+            document.writeln("1")
+        }
 
     }
+    console.log(count)
 </script>
 </body>
 </html>

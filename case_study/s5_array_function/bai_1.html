@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt(" Enter a length dismetrial");
+    let array = Array(length);
+    for (let i = 0; i < array.length; i++) {
+        let length2 = +prompt(" Enter length array " + (i + 1) + " :")
+        let array2 = Array(length2);
+        for (let j = 0; j < array2.length; j++) {
+            array2[j] = +prompt(" Enter a element " + (j + 1) + " :");
+            array[i] = array2;
+        }
+    }
+    console.log(sumElement(array));
+    console.log(array)
+
+    function sumElement(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] % 2 == 0) {
+                    sum += array[i][j];
+                }
+            }
+        }
+        return sum
+    }
+
+</script>
+</body>
+</html>
