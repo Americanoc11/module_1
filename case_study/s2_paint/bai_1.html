@@ -6,15 +6,15 @@
 </head>
 <body>
 <script>
-    let x = 4;
-    let y = 5;
-    for (let i = 0; i < x; i++) {
+    let h = 5;
+    for (let i = 0; i < h; i++) {
         document.write("<br>");
-        for (let j = 0; j < y; j++) {
-            if (i == 0 || i == x-1  || j == y-1 || i==y-1|| j==0 ) {
-                document.write("*");
+        for (let j = 0; j <= i; j++) {
+            if (i == h-1|| j==0|| i==j) {
+                document.writeln("*")
+
             } else {
-                document.write("&nbsp&nbsp");
+                document.writeln("&nbsp&nbsp")
             }
         }
     }
