@@ -5,89 +5,53 @@
     <title>Title</title>
 </head>
 <body>
-<table border="1px">
-    <tr>
-        <th colspan="4">Menu</th>
-    </tr>
-    <tr>
-        <th colspan="2">Tên món</th>
-        <th> Giá</th>
-        <th> Số lượng</th>
-    </tr>
-    <tr>
-        <td>
-            <button onclick="clickNumber1()" id="numberOne">1</button>
-        </td>
-        <td>Cafe</td>
-        <td>12000</td>
-        <td><input type="number" id="cafe"></td>
-    </tr>
-    <tr>
-        <td>
-            <button> 2</button>
-        </td>
-        <td>Cam Vắt</td>
-        <td>15000</td>
-        <td><input type="number" id="cam"></td>
-    </tr>
-    <tr>
-        <td>
-            <button> 3</button>
-        </td>
-        <td>Nước ép cà rốt</td>
-        <td>15000</td>
-        <td><input type="number" id="carot"></td>
-    </tr>
-    <tr>
-        <td>
-            <button> 4</button>
-        </td>
-        <td>Nước ép cà chua</td>
-        <td>15000</td>
-        <td><input type="number" id="cachua"></td>
-    </tr>
-    <tr>
-        <td>
-            <button> 5</button>
-        </td>
-        <td>Nước lọc</td>
-        <td>10000</td>
-        <td><input type="number" id="nuocloc"></td>
-    </tr>
-    <tr>
-        <td>
-            <button> 6</button>
-        </td>
-        <td>Nước dừa</td>
-        <td>20000</td>
-        <td><input type="number" id="nuocdua"></td>
-    </tr>
-    <tr>
-        <td colspan="4">
-            <button onclick="showResult()">7</button>
-        </td>
-        <td id="result"></td>
-    </tr>
-</table>
 <script>
-    function showResult() {
-        let result = document.getElementById('result');
-        let cafe = document.getElementById('cafe').value;
-        let cam = document.getElementById('cam').value;
-        let carot = document.getElementById('carot').value;
-        let cachua = document.getElementById('cachua').value;
-        let nuocloc = document.getElementById('nuocloc').value;
-        let nuocdua = document.getElementById('nuocdua').value;
-        let total = cafe * 12000 + cam * 15000 + carot * 15000 + cachua * 15000 + nuocloc * 10000 + nuocdua * 20000;
-        result.innerHTML = total;
-    }
+    let menu;
+    let total = 0;
+    do {
 
-    function clickNumber1() {
-        let numberOne = document.getElementById('numberOne').value;
-        let cafe = document.getElementById('cafe').value;
-        let total = 1;
-    }
+        menu = +prompt(
+            "Menu " + "\n"
+            + "1. Cafe " + "12000 " + "\n"
+            + "2. Cam vắt " + "15000 " + "\n"
+            + "3. Nước ép cà rốt " + "15000" + "\n"
+            + "4. Nước ép cà chua " + "15000" + "\n"
+            + "5. Nước lọc " + "7000" + "\n"
+            + "6. Nước dừa " + "15000" + "\n"
+            + "7. Tính tiền ");
+        switch (menu) {
+            case 1:
+                let cafe = 12000;
+                total += 1 * cafe;
+                break;
+            case 2:
+                let orangeJuice = 15000;
+                total += 1 * orangeJuice;
+                break;
+            case 3:
+                let carrotJuice = 15000;
+                total += 1 * carrotJuice;
+                break;
+            case 4:
+                let tomatoJuice = 15000;
+                total += 1 * tomatoJuice;
+                break;
+            case 5:
+                let bottle = 15000;
+                total += 1 * bottle;
+                break;
+            case 6:
+                let coconut = 15000;
+                total += 1 * coconut;
+                break;
+            case 7:
+                document.writeln("Total: " + total);
+                break;
+            default:
+                document.writeln(" Chọn lại");
+        }
 
+    } while (menu < 7);
 </script>
 </body>
 </html>
