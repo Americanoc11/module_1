@@ -6,42 +6,52 @@
 </head>
 <body>
 <script>
-    let number = +prompt(" Enter a number");
-    switch (number) {
-        case 1:
-            document.writeln(" One");
-            break;
-        case 2:
-            document.writeln(" Two");
-            break;
-        case 3:
-            document.writeln(" Three");
-            break;
-        case 4:
-            document.writeln(" Four");
-            break;
-        case 5:
-            document.writeln(" Five");
-            break;
-        case 6:
-            document.writeln(" Six");
-            break;
-        case 7:
-            document.writeln(" Seven");
-            break;
-        case 8:
-            document.writeln(" Eight");
-            break;
-        case 9:
-            document.writeln(" Nine");
-            break;
-        case 10:
-            document.writeln(" Ten");
-            break;
-        default:
-            document.writeln(" Can't translated");
-            break;
-    }
+    let menu;
+    let total = 0;
+    do {
+
+        menu = +prompt(
+            "Menu " + "\n"
+            + "1. Cafe " + "12000 " + "\n"
+            + "2. Cam vắt " + "15000 " + "\n"
+            + "3. Nước ép cà rốt " + "15000" + "\n"
+            + "4. Nước ép cà chua " + "15000" + "\n"
+            + "5. Nước lọc " + "7000" + "\n"
+            + "6. Nước dừa " + "15000" + "\n"
+            + "7. Tính tiền ");
+        switch (menu) {
+            case 1:
+                let cafe = 12000;
+                total += 1 * cafe;
+                break;
+            case 2:
+                let orangeJuice = 15000;
+                total += 1 * orangeJuice;
+                break;
+            case 3:
+                let carrotJuice = 15000;
+                total += 1 * carrotJuice;
+                break;
+            case 4:
+                let tomatoJuice = 15000;
+                total += 1 * tomatoJuice;
+                break;
+            case 5:
+                let bottle = 15000;
+                total += 1 * bottle;
+                break;
+            case 6:
+                let coconut = 15000;
+                total += 1 * coconut;
+                break;
+            case 7:
+                document.writeln("Total: " + total);
+                break;
+            default:
+                document.writeln(" Chọn lại");
+        }
+
+    } while (menu < 7);
 </script>
 </body>
 </html>
