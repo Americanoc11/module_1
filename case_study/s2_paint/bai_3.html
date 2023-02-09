@@ -12,8 +12,8 @@
         for (let j = 5; j > i; j--) {
             document.writeln("&nbsp&nbsp");
         }
-        for (let k = 0; k <= i * 2; k++) {
-            if (k == 0 || i == h - 1 || k == (i * 2)) {
+        for (let k = 1; k <= (i * 2) - 1; k++) {
+            if (k == 1 || i == h-1 || k == (i * 2) - 1) {
                 document.writeln("*");
             } else {
                 document.writeln("&nbsp&nbsp");
