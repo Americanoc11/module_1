@@ -6,22 +6,33 @@
 </head>
 <body>
 <script>
-    let num = [5, 2, 5];
-    let denom = [6, 3, 4];
-    let fraction=0;
-    let max=0;
-    for (let i = 0; i < num.length; i++) {
-        for (let j = 0; j < denom.length; j++) {
+    let lengthA = +prompt(" Enter a length A");
+    let lengthB = +prompt(" Enter a length B")
+    let numerator = Array(lengthA);
+    let denominator = Array(lengthB);
+    for (let i = 0; i < numerator.length; i++) {
+        numerator[i] = +prompt("Array A enter element " + (i + 1) + " :");
+    }
+    for (let i = 0; i < denominator.length; i++) {
+        denominator[i] = +prompt("Array B enter element " + (i + 1) + " :");
+    }
+    let fraction = 0;
+    let max = 0;
+    let index = 0;
+    for (let i = 0; i < numerator.length; i++) {
+        for (let j = 0; j < denominator.length; j++) {
             if (i == j) {
-                fraction = num[i] / denom[j];
+                fraction = Math.ceil(numerator[i] / denominator[j]);
                 break;
             }
         }
         if (max < fraction) {
-            max=fraction;
+            max = fraction;
+            index = i;
         }
     }
-    document.writeln(max);
+    document.writeln(" Max: " + max + "<br>"
+        + "Index: " + index);
 </script>
 </body>
 </html>
