@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="displayStudent(array)">Hiện danh sách học viên</button>
+<button onclick="addNewStudent()">Thêm mới học viên</button>
+<button onclick="deleteStudent()">Xóa</button>
+<p id="result"></p>
+<script>
+    class InformationStudent {
+        constructor(maso, ten, lop, email, ngaySinh, module) {
+            this.maSo = maso;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaySinh = ngaySinh;
+            this.module = module;
+        }
+
+        getMaSo() {
+            return this.maSo;
+        }
+
+        setMaso(number) {
+            this.maSo = number;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setMaso(number) {
+            this.maSo = number;
+        }
+
+        getLop() {
+            return this.lop;
+        }
+
+        setLop(number) {
+            this.lop = number;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setEmail(number) {
+            this.email = number;
+        }
+
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+
+        setNgaySinh(number) {
+            this.ngaySinh = number;
+        }
+
+        getModule() {
+            return this.module;
+        }
+
+        setModule(number) {
+            this.module = number;
+        }
+    }
+
+    function displayStudent(array) {
+        let table = "<table border='1px'>\n" +
+            "<tr>\n" +
+            "<th>Mã học viên</th>\n" +
+            "<th>Tên</th>\n" +
+            "<th>Lớp</th>\n" +
+            "<th>Email</th>\n" +
+            "<th>Ngày Sinh</th>\n" +
+            "<th>Module</th>\n" +
+            "</tr>";
+        for (let i = 0; i < array.length; i++) {
+            table += "<tr>\n" +
+                "<td>" + array[i].getMaSo() + "</td>\n" +
+                "<td>" + array[i].getTen() + "</td>\n" +
+                "<td>" + array[i].getLop() + "</td>\n" +
+                "<td>" + array[i].getEmail() + "</td>\n" +
+                "<td>" + array[i].getNgaySinh() + "</td>\n" +
+                "<td>" + array[i].getModule() + "</td>\n" +
+                "</tr>";
+        }
+        table += "</table>";
+        document.getElementById("result").innerHTML = table;
+    }
+
+    function addNewStudent() {
+        let maHocVien = prompt(" Nhập mã học viên");
+        let ten = prompt(" Nhập tên học viên");
+        let lop = prompt(" nhập lớp của học viên");
+        let email = prompt(" Nhập email của học viên");
+        let date = prompt(" nhập ngày sinh của học viên");
+        let module = prompt(" nhập module đang học");
+        let student = new InformationStudent(maHocVien, ten, lop, email, date, module);
+        array.push(student);
+        displayStudent(array);
+    }
+
+    function deleteStudent() {
+        let maHocVien = prompt(" Nhập mã học viên");
+        let flag = false;
+        for (let i = 0; i < array.length; i++) {
+            flag = false;
+            if (maHocVien == array[i].getMaSo()) {
+                flag = true;
+            }
+            if (confirm(" Bạn có muốn xóa học viên không") == true) {
+                array.splice(i, 1);
+            }
+        }
+        displayStudent(array);
+    }
+
+    let stu1 = new InformationStudent(
+        "001", "Huynh Duc", "C1222G1"
+        , "hhd@gmail.com", "04/05/00", "Module 1");
+    let array = [stu1];
+</script>
+</body>
+</html>
