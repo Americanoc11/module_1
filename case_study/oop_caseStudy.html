@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="addNewStudent()">Thêm mới học viên</button>
+<button onclick="fixInformation()">Sửa thông tin học viên</button>
+<button onclick="deleteStudent()">Xóa học viên</button>
+<p id="result"></p>
+<script>
+    class InformationStudent {
+        constructor(codestu, name, classStu, email, date, module) {
+            this.maHocVien = codestu;
+            this.name = name;
+            this.class = classStu;
+            this.email = email;
+            this.date = date;
+            this.module = module;
+        }
+
+        getMaHocVien() {
+            return this.maHocVien;
+        }
+
+        setMaHocVien(number) {
+            this.maHocVien = number;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getClass() {
+            return this.class;
+        }
+
+        setClass(nameclass) {
+            this.class = nameclass;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+
+        getDate() {
+            return this.date;
+        }
+
+        setDate(date) {
+            this.date = date;
+        }
+
+        getModule() {
+            return this.module;
+        }
+
+        setModule(module) {
+            this.module = module;
+        }
+    }
+
+    let stu1 = new InformationStudent("001", " Duc", "C12G1", "hhd@gmail.com", "01/01", "module 1")
+    let array = [stu1];
+    displayStudent(array);
+
+    function displayStudent(array) {
+        let table = "<table border='1px'>\n" +
+            "<tr>\n"
+            + "<th>Mã học viên</th>\n"
+            + "<th>Tên</th>\n"
+            + "<th>Lớp</th>\n"
+            + "<th>Email</th>\n"
+            + "<th>Ngày Sinh</th>\n"
+            + "<th>Module</th>\n" +
+            "</tr>"
+        "</table>"
+        for (let i = 0; i < array.length; i++) {
+            table += "<tr>\n" +
+                "<td>" + array[i].getMaHocVien() + "</td>" +
+                "<td>" + array[i].getName() + "</td>" +
+                "<td>" + array[i].getClass() + "</td>" +
+                "<td>" + array[i].getEmail() + "</td>" +
+                "<td>" + array[i].getDate() + "</td>" +
+                "<td>" + array[i].getModule() + "</td>" +
+                "</tr>\n"
+        }
+        document.getElementById("result").innerHTML = table;
+
+    }
+
+    function addNewStudent() {
+        let codeStu = prompt(" Nhập mã học viên");
+        let name = prompt(" Nhập tên học viên");
+        let classStu = prompt(" Nhập lớp học viên");
+        let email = prompt(" Nhập email học viên");
+        let date = prompt(" Nhập ngày sinh học viên");
+        let module = prompt(" nhập module của học viên");
+        let newStu = new InformationStudent(codeStu, name, classStu, email, date, module);
+        array.push(newStu);
+        displayStudent(array);
+
+    }
+
+    function deleteStudent() {
+        let deleteStu = prompt(" Nhập mã học viên");
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].getMaHocVien() == deleteStu) {
+                if (confirm(" Bạn có muốn xóa học viên")) {
+                    array.splice(i, 1);
+                }
+            }
+
+        }
+        displayStudent(array);
+    }
+
+    function fixInformation() {
+        let codeName = prompt(" Nhập mã học viên");
+        for (let i = 0; i < array.length; i++) {
+            if (codeName == array[i].getMaHocVien()) {
+                let codeStu = prompt(" Nhập mã học viên");
+                let name = prompt(" Nhập tên học viên");
+                let classStu = prompt(" Nhập lớp học viên");
+                let email = prompt(" Nhập email học viên");
+                let date = prompt(" Nhập ngày sinh học viên");
+                let module = prompt(" nhập module của học viên");
+                array[i].setMaHocVien(codeStu);
+                array[i].setName(name);
+                array[i].setClass(classStu);
+                array[i].setEmail(email);
+                array[i].setDate(date);
+                array[i].setModule(module);
+                break;
+            } else {
+                alert(" Mã học viên không tôn tại")
+            }
+        }
+        displayStudent(array);
+    }
+</script>
+</body>
+</html>
