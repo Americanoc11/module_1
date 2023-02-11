@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="addAccount()">Thêm tài khoản</button>
+<button onclick="fixAccount()">Chỉnh sửa</button>
+<button onclick="deleteAccount()">Xóa</button>
+<p id="result"></p>
+<script>
+    // Bài 1
+    /*
+    let length = +prompt(" Enter a length")
+    let array = Array(length);
+    for (let i = 0; i < array.length; i++) {
+        do {
+            array[i] = +prompt(" Enter element " + (i + 1) + " :");
+        } while (array[i] > 49);
+    }
+    let sum = 0;
+    let total = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 5 == 0 && i >= 3) {
+            sum += array[i];
+            if (i % 3) {
+                total = sum / 3;
+            }
+        }
+
+    }
+    console.log(array);
+    document.writeln("Avenrage : " + total);
+
+     */
+
+    // Bài 3
+    /*
+    let array = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1];
+    console.log(checkFibo(array));
+
+    function checkFibo(array) {
+        let newArray = [];
+        let array2 = []
+        let c = 0;
+        let b = 0;
+        let a = 0;
+        for (let i = 0; i < array.length; i++) {
+            c = a + b;
+            if (b == 0) {
+                b++;
+            }
+            a = b;
+            b = c;
+            newArray.push(c)
+        }
+        for (let i = 0; i < newArray.length; i++) {
+            for (let j = 0; j < array.length; j++) {
+                if (newArray[i] == array[j]) {
+                    array2.push(array[j])
+                }
+            }
+        }
+        return array2
+
+    }
+
+     */
+
+    // Bài 4
+    /*
+        class Account {
+            constructor(accountNum, name, bank, money) {
+                this.account = accountNum;
+                this.name = name;
+                this.bank = bank;
+                this.money = money;
+            }
+
+            getAccount() {
+                return this.account;
+            }
+
+            setAccount(string) {
+                this.account = string;
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            setName(name) {
+                this.name = name;
+            }
+
+            getBank() {
+                return this.bank;
+            }
+
+            setBank(bank) {
+                this.bank = bank;
+            }
+
+            getMoney() {
+                return this.money;
+            }
+
+            setMoney(money) {
+                this.money = money;
+            }
+        }
+
+        let human = new Account("113", "Duc", "Techcombank", 100000);
+        let human2 = new Account("112", "Huynh", "Techcombank", 100000);
+        let array = [human, human2];
+        displayAccount(array);
+
+        function displayAccount(array) {
+            let table = "<table border='1px'>\n"
+                + "<tr>\n"
+                + "<th> Mã tài khoản</th>\n"
+                + "<th> Tên tài khoản</th>\n"
+                + "<th> Ngân hàng</th>\n"
+                + "<th> Số dư tài khoản</th>\n"
+                + "</tr>\n"
+            "</table>\n"
+            for (let i = 0; i < array.length; i++) {
+                table += "<tr>\n"
+                    + "<td>" + array[i].getAccount() + "</td>\n"
+                    + "<td>" + array[i].getName() + "</td>\n"
+                    + "<td>" + array[i].getBank() + "</td>\n"
+                    + "<td>" + array[i].getMoney() + "</td\n>"
+                    // + "<td>" + "<button onclick='setAccount()'>Chỉnh Sửa</button>" + "</td\n>"
+                    // + "<td>" + "<button onclick='deleteAccount()'>Xóa</button>" + "</td\n>"
+                    + "</tr>\n";
+            }
+            document.getElementById("result").innerHTML = table
+        }
+
+        function addAccount() {
+            let account = prompt("Nhập mã tài khoản");
+            let name = prompt(" Nhập tên tài khoản");
+            let bank = prompt(" Nhập ngân hàng");
+            let money = +prompt(" Nhập số dư");
+            let newAccount = new Account(account, name, bank, money);
+            array.push(newAccount);
+            displayAccount(array);
+        }
+
+        function deleteAccount() {
+            let accountName = prompt(" Mã tài khoản");
+            for (let i = 0; i < array.length; i++) {
+                if (accountName == array[i].getAccount()) {
+                    array.splice(i, 1);
+                }
+            }
+            displayAccount(array);
+        }
+
+        function fixAccount() {
+            let accountName = prompt(" Mã tài khoản");
+            for (let i = 0; i < array.length; i++) {
+                if (accountName == array[i].getAccount()) {
+                    let name = prompt(" Nhập tên tài khoản");
+                    let bank = prompt(" Nhập ngân hàng");
+                    let money = +prompt(" Nhập số dư");
+                    array[i].setName(name);
+                    array[i].setBank(bank);
+                    array[i].setMoney(money);
+                    break;
+                }
+            }
+            displayAccount(array);
+
+        }
+
+     */
+
+
+    // Bai 2
+    // let array = [" object", " Oriented", " programming"];
+    // for (let i = 0; i < array.length; i++) {
+    //     for (let j = 0; j < array[i].length; j++) {
+    //         if (array[i].length > 2) {
+    //             array[i] = array[i].charAt(0)+array[i].slice(1,array[i].length)
+    //         }
+    //     }
+    // }
+    // console.log(array.join(" "))
+</script>
+</body>
+</html>
