@@ -69,9 +69,10 @@
         }
     }
 
-    let stu1 = new InformationStudent("001", " Duc", "C12G1", "hhd@gmail.com", "01/01", "module 1")
-    let array = [stu1];
-    displayStudent(array);
+    let stu1 = new InformationStudent("HV-1000", " Duc", "C12G1", "hhd@gmail.com", "01/01", "module 1");
+    let stu2 = new InformationStudent("HV-2000", " Duc", "C12G1", "hhd@gmail.com", "01/01", "module 2");
+    let infStu = [stu1, stu2];
+    displayStudent(infStu);
 
     function displayStudent(array) {
         let table = "<table border='1px'>\n" +
@@ -99,15 +100,15 @@
     }
 
     function addNewStudent() {
-        let codeStu = prompt(" Nhập mã học viên");
+        let codeStu = checkAccountNumber();
         let name = prompt(" Nhập tên học viên");
         let classStu = prompt(" Nhập lớp học viên");
         let email = prompt(" Nhập email học viên");
         let date = prompt(" Nhập ngày sinh học viên");
-        let module = prompt(" nhập module của học viên");
+        let module = checkModule();
         let newStu = new InformationStudent(codeStu, name, classStu, email, date, module);
-        array.push(newStu);
-        displayStudent(array);
+        infStu.push(newStu);
+        displayStudent(infStu);
 
     }
 
@@ -121,7 +122,7 @@
             }
 
         }
-        displayStudent(array);
+        displayStudent(infStu);
     }
 
     function fixInformation() {
@@ -142,10 +143,64 @@
                 array[i].setModule(module);
                 break;
             } else {
-                alert(" Mã học viên không tôn tại")
+                alert(" Mã học viên không tôn tại");
             }
         }
-        displayStudent(array);
+        displayStudent(infStu);
+    }
+
+    function checkAccountNumber(string) {
+        let flag = false;
+        let arr;
+        do {
+            string = prompt(" Nhập mã học viên");
+            arr = string.split("-");
+        } while (!checkCharAccNumber(arr, infStu, string));
+        return arr.join("-");
+    }
+
+    function checkCharAccNumber(arrayAcc, array, string) {
+        let flag = false;
+        for (let i = 0; i < arrayAcc.length; i++) {
+            if (arrayAcc[i] > 0) {
+                if (arrayAcc[i] > 999 && arrayAcc[i] < 10000) {
+                    for (let j = 0; j < array.length; j++) {
+                        if (string == array[j].getMaHocVien()) {
+                            alert("Trùng mã học viên");
+                            return flag = false;
+                        } else {
+                            return flag = true;
+                        }
+                    }
+                } else {
+                    alert(" Mã học viên tối thiểu 4 chữ số");
+                }
+            }
+        }
+    }
+
+    function checkModule(string) {
+        let flag = false;
+        let arr;
+        do {
+            string = prompt("Nhập module đang học");
+            arr = string.split(" ");
+        } while (!checkNumModule(arr));
+        return arr.join(" ");
+
+    }
+
+    function checkNumModule(array) {
+        let flag = false;
+        for (let i = 0 ; i < array.length; i ++) {
+            if (i == 1) {
+                if (array[i] > 0 && array[i] <= 6) {
+                    return flag = true;
+                } else {
+                    alert(" Không hợp lệ");
+                }
+            }
+        }
     }
 </script>
 </body>
