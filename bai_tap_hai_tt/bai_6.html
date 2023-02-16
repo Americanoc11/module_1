@@ -6,16 +6,19 @@
 </head>
 <body>
 <script>
-    let string = prompt(" nhập chuỗi")
-    let array = [];
-    for (let i = 0; i < string.length; i++) {
-        for (let j = i; j < string.length; j++) {
-            if (string[j] === string[i] && i !== j) {
-                array.push(string[j])
+    let string = "abcbdcef";
+    let array = string.split("");
+    let arr = [];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[i] == array[j] && i !== j) {
+                array.push(array[j])
+                array.splice(j, 1)
             }
         }
     }
-    console.log(array);
+    console.log(array)
+    console.log(arr)
 </script>
 </body>
 </html>

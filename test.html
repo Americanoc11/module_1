@@ -6,82 +6,16 @@
 </head>
 <body>
 <script>
-    // bài 0
-    /*
-    arr = [1, 4, 5, 2, 7, 9, 4];
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[i] < arr[j]) {
-                let b= arr[i];
-                arr[i]= arr[j];
-                arr[j]= b;
-            }
+    let h = 5
+    for (let i = 0; i < h; i++) {
+        document.writeln("<br>");
+        for (let j = 5;j >i;j--) {
+            document.writeln("&nbsp&nbsp")
+        }
+        for (let k=0 ; k < i*2; k++) {
+            document.writeln("*")
         }
     }
-    console.log(arr)
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[i] > arr[j]) {
-                let b= arr[i];
-                arr[i]= arr[j];
-                arr[j]= b;
-            }
-        }
-    }
-    console.log(arr)
-
-     */
-
-    // bài 1
-    /*
-    let array = [1, 5, 7, 8, 9, 15, 8];
-    let arr = [];
-    let arr2 = [];
-    let sum = 0;
-    let sum1=0;
-    let tich = 1;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] % 2 == 0) { // in ra số chẵn
-            arr.push(array[i]);
-        }
-        if (array[i] % 2 == 1) { // in ra số lẻ
-            arr2.push(array[i])
-        }
-        if (array[i] >= 5) { // in ra số lớn hơn 5
-            document.writeln(array[i])
-        }
-        if (array[i] % 5 == 0) { // tổng các số chia hết cho 5
-            sum += array[i]
-        }
-        if (i < 3) { // tích 3 phần tử đầu
-            tich *= array[i];
-        }
-        if (i > 3) {
-            sum1+=array[i];
-        }
-    }
-
-    console.log(arr)
-    console.log(arr2)
-    console.log(sum)
-    console.log(tich)
-    console.log(sum1)
-
-     */
-
-    //Bài 2.1 Nang cao
-    let array = [
-        [1, 2, 3, 4],
-        [4, 3, 2, 1],
-        [2, 3, 4, 5],
-        [5, 4, 3, 2],
-    ];
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array[i].length; j++) {
-            console.log(array[i][j])
-        }
-    }
-
 </script>
 </body>
 </html>

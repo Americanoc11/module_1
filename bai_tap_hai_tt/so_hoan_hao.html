@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let flag = false;
+    let total = 0
+    let number = prompt(" Enter a number");
+    for (let i = 1; i < number; i++) {
+        if (number % i == 0) {
+            total += i;
+        }
+    }
+    if (total == number && number !== 0) {
+        flag = true
+    }
+    if (flag) {
+        alert(" là số hoàn hảo")
+    } else {
+        alert(" không phải số hoàn hảo")
+    }
+
+    // let number = 6;
+    // let count = 0;
+    // while (count < 5) {
+    //     let total = 0;
+    //     for (let i = 1; i < number; i++) {
+    //         if (number % i == 0) {
+    //             total += i;
+    //         }
+    //     }
+    //     if (total == number && number !== 0) {
+    //         document.writeln(number)
+    //         count++
+    //     }
+    //     number++;
+    // }
+</script>
+</body>
+</html>
